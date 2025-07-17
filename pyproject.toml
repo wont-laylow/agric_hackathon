@@ -1,0 +1,24 @@
+[project]
+name = "hackathon-backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "sqlalchemy",
+  "psycopg2-binary",
+  "langchain",
+  "pydantic",
+  "python-dotenv",
+  "openai",
+  "google-cloud-storage",
+  "pypdf",
+  "faiss-cpu",
+  "datasets",
+  "blis", 
+  "spacy",
+  "langchain-community",
+  "tiktoken",
+]
