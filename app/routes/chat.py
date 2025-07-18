@@ -10,9 +10,9 @@ from utils.logger import logger
 from app.models.models import ChatHistory, Feedback
 from datetime import datetime
 
-router = APIRouter(prefix="/api/v1", tags=["Chat"])
+router = APIRouter(prefix="/api/v1/chat", tags=["Chat"])
 
-@router.post("/chat", response_model=ChatResponse)
+@router.post("/infer", response_model=ChatResponse)
 async def chat(request: ChatRequest, db: Session = Depends(get_db)):
     try:
         user_message = request.message

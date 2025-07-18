@@ -5,9 +5,9 @@ from sqlalchemy.orm import Session
 from app.models.models import User
 from utils.logger import logger
 
-router = APIRouter(prefix="/api/v1", tags=["Users"])
+router = APIRouter(prefix="/api/v1/users", tags=["Auth"])
 
-@router.post("/users", response_model=UserResponse)
+@router.post("/register", response_model=UserResponse)
 async def create_user(user: UserCreate, db: Session = Depends(get_db)):
     try:
         new_user = User(
@@ -24,10 +24,17 @@ async def create_user(user: UserCreate, db: Session = Depends(get_db)):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@router.post("/users/login", response_model=UserLoginResponse)
+@router.post("/login", response_model=UserLoginResponse)
 async def login_user(user: UserLogin, db: Session = Depends(get_db)):
     try:
-        db_user = db.query(User).filter(User.username == user.username).first()
-   
-    return {"message": "User logged in successfully"}
+        db_user = db.query(User).filter(
+            (User.username == user.username) & (User.password == user.password)).first()
+        if not db_user:
+            raise HTTPException(status_code=401, detail="Invalid credentials")
+       
+        return {"message": "User logged in successfully"}
+    except Exception as e:
+        logger.error(f"Error in login_user: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+    
 
