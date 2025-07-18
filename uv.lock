@@ -856,6 +856,7 @@ dependencies = [
     { name = "google-cloud-storage" },
     { name = "langchain" },
     { name = "langchain-community" },
+    { name = "langchain-openai" },
     { name = "openai" },
     { name = "psycopg2-binary" },
     { name = "pydantic" },
@@ -876,6 +877,7 @@ requires-dist = [
     { name = "google-cloud-storage" },
     { name = "langchain" },
     { name = "langchain-community" },
+    { name = "langchain-openai" },
     { name = "openai" },
     { name = "psycopg2-binary" },
     { name = "pydantic" },
@@ -1167,6 +1169,20 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/23/20/f5b18a17bfbe3416177e702ab2fd230b7d168abb17be31fb48f43f0bb772/langchain_core-0.3.68.tar.gz", hash = "sha256:312e1932ac9aa2eaf111b70fdc171776fa571d1a86c1f873dcac88a094b19c6f", size = 563041 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/f9/da/c89be0a272993bfcb762b2a356b9f55de507784c2755ad63caec25d183bf/langchain_core-0.3.68-py3-none-any.whl", hash = "sha256:5e5c1fbef419590537c91b8c2d86af896fbcbaf0d5ed7fdcdd77f7d8f3467ba0", size = 441405 },
+]
+
+[[package]]
+name = "langchain-openai"
+version = "0.3.28"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "langchain-core" },
+    { name = "openai" },
+    { name = "tiktoken" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6b/1d/90cd764c62d5eb822113d3debc3abe10c8807d2c0af90917bfe09acd6f86/langchain_openai-0.3.28.tar.gz", hash = "sha256:6c669548dbdea325c034ae5ef699710e2abd054c7354fdb3ef7bf909dc739d9e", size = 753951 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/91/56/75f3d84b69b8bdae521a537697375e1241377627c32b78edcae337093502/langchain_openai-0.3.28-py3-none-any.whl", hash = "sha256:4cd6d80a5b2ae471a168017bc01b2e0f01548328d83532400a001623624ede67", size = 70571 },
 ]
 
 [[package]]

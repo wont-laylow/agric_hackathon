@@ -2,7 +2,7 @@
 Module for rag 
 """
 from .configs import Configs
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 
 configs = Configs()
 

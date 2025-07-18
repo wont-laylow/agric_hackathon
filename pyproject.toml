@@ -21,4 +21,5 @@ dependencies = [
   "spacy",
   "langchain-community",
   "tiktoken",
+  "langchain-openai"
 ]
