@@ -8,6 +8,8 @@ from .ml.inference import load_models, unload_models
 from .chatbot.local_service import get_bot_service
 from .api.endpoints import router as page_router, api_router
 
+# from finetuning.api_endpoints import router as finetuning_router
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Handles application startup and shutdown."""
@@ -29,3 +31,4 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 app.include_router(page_router)
 app.include_router(api_router)
+# app.include_router(finetuning_router)
