@@ -21,6 +21,25 @@ The Crop Disease Analyzer is a comprehensive AI-powered system designed to help 
 - **Confidence Scoring**: Top-5 predictions with confidence percentages
 - **Database Logging**: Persistent storage of prediction results and user interactions
 
+## 🔬 Experimental Features
+
+> ⚠️ **EXPERIMENTAL - NOT YET LIVE** ⚠️
+> 
+> The following features are under development and not yet available in the production system.
+
+### **Personalized Fine-tuning Pipeline** (`finetuning/`)
+- **Farmer Data Upload**: Secure upload of farm images with labels for personalized model training
+- **LoRA Fine-tuning**: Parameter-efficient fine-tuning using LoRA adapters for local environmental adaptation
+- **Background Training**: Asynchronous training that doesn't block the main application
+- **Model Personalization**: Adapts to local climate, soil conditions, and crop variations
+- **Local Adaptation**: Personalized models for specific geographic regions and farming practices
+
+**Benefits:**
+- **Environmental Adaptation**: Models learn local climate and soil conditions
+- **Crop Variety Handling**: Adapts to local crop variations and farming practices
+- **Disease Pattern Recognition**: Captures region-specific disease manifestations
+- **Continuous Learning**: Improves accuracy over time with more local data
+
 ## 🏗️ System Architecture
 
 ### Core Components
@@ -50,6 +69,12 @@ The Crop Disease Analyzer is a comprehensive AI-powered system designed to help 
    - SQLite database with async support
    - Prediction logging
    - User management
+
+6. **Experimental Fine-tuning Pipeline** (`finetuning/`) ⚠️ **EXPERIMENTAL**
+   - Farmer data processing and validation
+   - LoRA adapter training and management
+   - Background training orchestration
+   - Personalized model adaptation
 
 ## 🤖 Machine Learning Models
 
@@ -106,6 +131,13 @@ The Crop Disease Analyzer is a comprehensive AI-powered system designed to help 
 - **Vector Store**: FAISS IndexFlatL2
 - **Search**: Semantic similarity search
 - **Response Generation**: Rule-based keyword matching
+
+### 4. Experimental LoRA Fine-tuning System ⚠️ **EXPERIMENTAL**
+- **Base Model**: MobileNetV3-Large-100 with LoRA adapters
+- **Fine-tuning Method**: Parameter-efficient LoRA (Low-Rank Adaptation)
+- **Training Data**: Farmer-uploaded images with local labels
+- **Personalization**: Region-specific environmental and crop adaptations
+- **Storage**: Small adapter files (~10MB) for easy deployment
 
 ## 📊 Knowledge Base Structure
 
@@ -223,6 +255,11 @@ hackathon/
 │   ├── templates/          # HTML templates
 │   ├── utils/              # Utility functions
 │   └── data/               # Knowledge base JSON
+├── finetuning/             # ⚠️ EXPERIMENTAL - Fine-tuning pipeline
+│   ├── data_pipeline.py    # Data processing and validation
+│   ├── lora_trainer.py     # LoRA fine-tuning implementation
+│   ├── api_endpoints.py    # Fine-tuning API endpoints
+│   └── __init__.py         # Package initialization
 ├── rag_pipeline/           # RAG implementation
 ├── model_store/            # Trained models
 ├── faiss_index/            # Vector store indices
@@ -252,6 +289,13 @@ hackathon/
 1. All predictions are logged to database
 2. User interactions are tracked for analytics
 3. System maintains audit trail of all activities
+
+### 5. Experimental Fine-tuning Process ⚠️ **EXPERIMENTAL**
+1. Farmers upload local farm images with disease labels
+2. System validates and processes uploaded data
+3. LoRA adapters are trained on local environmental conditions
+4. Personalized models adapt to regional crop variations
+5. Fine-tuned models provide improved local accuracy
 
 ## 🎨 User Interface
 
@@ -300,11 +344,23 @@ The web interface provides:
 - **Model Retraining**: Continuous learning capabilities
 - **Additional Crops**: Support for more agricultural crops
 
+### Experimental Features (Under Development)
+- **Personalized Fine-tuning**: LoRA-based model adaptation for local conditions
+- **Farmer Data Upload**: Secure pipeline for local farm data collection
+- **Regional Adaptation**: Models that learn from local environmental factors
+- **Continuous Personalization**: Iterative improvement with local data
+
 ### Technical Improvements
 - **GPU Acceleration**: Optional GPU support for faster inference
 - **Model Compression**: Quantized models for mobile deployment
 - **Real-time Updates**: Live knowledge base updates
 - **Advanced RAG**: More sophisticated retrieval mechanisms
+
+### Experimental Technical Enhancements
+- **LoRA Fine-tuning**: Parameter-efficient model adaptation
+- **Background Training**: Asynchronous model training pipeline
+- **Adapter Management**: Dynamic switching between personalized models
+- **Federated Learning**: Collaborative training across multiple farms
 
 ## 🤝 Contributing
 
@@ -314,6 +370,12 @@ This project is designed to support agricultural communities worldwide. Contribu
 - User interface enhancements
 - Knowledge base expansion
 - Testing and validation
+
+### Experimental Feature Contributions
+- **Fine-tuning Pipeline**: Help develop the personalized model adaptation system
+- **Data Collection**: Contribute to farmer data upload and validation systems
+- **Regional Adaptation**: Assist with local environmental condition modeling
+- **Training Algorithms**: Improve LoRA fine-tuning techniques
 
 ## 📄 License
 
