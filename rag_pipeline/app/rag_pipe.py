@@ -1,13 +1,9 @@
-"""
-Module for rag 
-"""
 from .configs import Configs
 from langchain_community.vectorstores import FAISS
 
 configs = Configs()
 
 class RAGPipeline:
-
     def __init__(self, faiss_index: FAISS, json_data: list, index_path: str):
         self.faiss_index = faiss_index
         self.embedding_model = configs.embedding_model
