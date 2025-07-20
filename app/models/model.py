@@ -1,12 +1,9 @@
-# models.py
 from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
 from .db import Base
 from datetime import datetime
 from sqlalchemy import DateTime
 
-
-# Users
 class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, index=True)
@@ -19,8 +16,6 @@ class User(Base):
     chat_history = relationship("ChatHistory", back_populates="user")
     feedback = relationship("Feedback", back_populates="user")
 
-
-# Chat
 class ChatHistory(Base):
     __tablename__ = "chat_history"
 
@@ -41,7 +36,3 @@ class Feedback(Base):
     comment = Column(String)
 
     chat = relationship("ChatHistory", back_populates="feedback")
-
-# Finetune requests
-
-# Image upload

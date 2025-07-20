@@ -1,7 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional
 
-# Chat
 class ChatRequest(BaseModel):
     user_id: int
     message: str
@@ -16,8 +15,6 @@ class FeedbackCreate(BaseModel):
 class FeedbackResponse(BaseModel):
     message: str
 
-
-# User
 class UserCreate(BaseModel):
     username: str
     email: str

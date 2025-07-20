@@ -4,12 +4,8 @@ from typing import AsyncGenerator
 from ..core.config import settings
 from .models import Base
 
-# Create an asynchronous engine to connect to the database.
-# 'echo=True' can be useful for debugging as it logs all SQL queries.
 engine = create_async_engine(settings.DATABASE_URL, echo=False)
 
-# Create a factory for asynchronous sessions.
-# This sessionmaker will be used to create new sessions for each request.
 async_session_maker = async_sessionmaker(
     bind=engine, 
     class_=AsyncSession, 

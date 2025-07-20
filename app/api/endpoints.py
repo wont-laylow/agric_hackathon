@@ -1,6 +1,3 @@
-# =============================================================================
-# FILE: app/api/endpoints.py (FINAL, USING LOCAL BOT)
-# =============================================================================
 from fastapi import APIRouter, Request, UploadFile, File, Depends
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -10,11 +7,8 @@ import traceback
 from ..db.database import get_db_session
 from ..ml.inference import run_prediction, is_image_a_leaf_permissive
 from ..schemas import PredictionResponse, ChatRequest, ChatResponse
-
-# --- UPDATED: Import the new local chatbot service ---
 from ..chatbot.local_service import get_bot_service, LocalKnowledgeBot
 
-# Routers
 router = APIRouter()
 api_router = APIRouter(prefix="/api")
 templates = Jinja2Templates(directory="app/templates")
@@ -28,19 +22,12 @@ async def create_prediction(request: Request, file: UploadFile = File(...), db: 
     try:
         image_bytes = await file.read()
 
-        # =================================================================
-        # START OF FIX: ADD THE GATEKEEPER VALIDATION CHECK
-        # =================================================================
         if not is_image_a_leaf_permissive(image_bytes):
-            # If the image is not a leaf, stop processing and return an error.
             error_message = (
                 "Validation Failed: The uploaded image does not appear to be a plant leaf. "
                 "Please upload a clear, close-up photo of a crop leaf."
             )
             return templates.TemplateResponse("index.html", {"request": request, "error": error_message})
-        # =================================================================
-        # END OF FIX
-        # =================================================================
 
         top_results = run_prediction(image_bytes)
         top_prediction_data = top_results[0]
@@ -79,20 +66,16 @@ async def create_prediction(request: Request, file: UploadFile = File(...), db: 
         traceback.print_exc()
         return templates.TemplateResponse("index.html", {"request": request, "error": f"A critical server error occurred: {str(e)}"})
 
-# --- THIS ENDPOINT NOW USES THE LOCAL BOT ---
 @api_router.post("/chat", response_model=ChatResponse)
 async def handle_chat(
     chat_request: ChatRequest,
     chatbot: LocalKnowledgeBot = Depends(get_bot_service)
 ):
-    # Use the initial, most accurate prediction to find the correct disease entry.
-    # This is robust to formatting issues.
     disease_context = chatbot.find_best_match(chat_request.predicted_class)
     
     if not disease_context:
         return ChatResponse(response="I'm sorry, I could not find detailed information for that disease in my knowledge base.")
 
-    # Use the user's specific question to format an answer from the retrieved context.
     answer = chatbot.format_answer(chat_request.query, disease_context)
     
     return ChatResponse(response=answer)

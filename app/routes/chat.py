@@ -34,16 +34,12 @@ async def chat(request: ChatRequest, db: Session = Depends(get_db)):
         logger.error(f"Error in chat: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
 @router.post("/feedback", response_model=FeedbackResponse)
 async def submit_feedback(feedback: FeedbackCreate, db: Session = Depends(get_db)):
     try:
         chat_entry = db.query(ChatHistory).filter(ChatHistory.id == feedback.chat_id).first()
         if not chat_entry:
             raise HTTPException(status_code=404, detail="Chat not found")
-        
-        # if chat_entry.user_id != current_user.id:
-        #     raise HTTPException(status_code=403, detail="Unauthorized to submit feedback for this chat")
         
         new_feedback = Feedback(
             rating=feedback.rating,

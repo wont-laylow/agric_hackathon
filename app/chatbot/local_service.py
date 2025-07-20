@@ -1,6 +1,3 @@
-# =============================================================================
-# FILE: app/chatbot/local_service.py (NEW FILE - PURELY LOCAL RAG)
-# =============================================================================
 import faiss
 import numpy as np
 from functools import lru_cache
@@ -12,14 +9,10 @@ class LocalKnowledgeBot:
     def __init__(self):
         print("INFO: Initializing Local Knowledge Bot...")
         
-        # 1. Load the sentence transformer model for creating embeddings
-        # This model is downloaded and runs entirely on your machine.
         self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
         
-        # 2. Load and process the knowledge base data
         self.raw_data, self.processed_chunks = self._load_and_process_kb()
         
-        # 3. Build the vector store for efficient searching
         self.vector_store = self._build_vector_store()
         print("INFO: Local Knowledge Bot initialized successfully.")
 
@@ -30,11 +23,9 @@ class LocalKnowledgeBot:
         processed_chunks = []
         for crop, diseases in kb.items():
             for disease_info in diseases:
-                # We use the 'name' as a unique key to retrieve the full structured data later
                 key = disease_info["name"]
                 raw_data[key] = disease_info
                 
-                # Create a comprehensive text chunk for embedding. The more info, the better the match.
                 chunk = (
                     f"Disease: {disease_info['name'].replace('_', ' ')}. "
                     f"Crop: {crop}. "
@@ -63,18 +54,15 @@ class LocalKnowledgeBot:
         Finds the most relevant knowledge base entry for a query and returns its structured data.
         """
         query_embedding = self.embedding_model.encode([query])
-        # Search for the single best match (k=1)
         _, I = self.vector_store.search(np.array(query_embedding, dtype=np.float32), 1)
         
         if not I.size:
             return None
             
         best_match_index = I[0][0]
-        # Get the unique key of the best match
         context_key = self.processed_chunks[best_match_index]['key']
         
         print(f"DEBUG: Chatbot query '{query}' matched best with KB entry: '{context_key}'")
-        # Return the complete, original dictionary for that entry
         return self.raw_data.get(context_key)
 
     def format_answer(self, query: str, disease_info: dict) -> str:
@@ -94,13 +82,11 @@ class LocalKnowledgeBot:
         if "cause" in query or "spread" in query or "why" in query:
             return f"{disease_name} is typically caused by: {disease_info['causes']}"
             
-        if "diagnos" in query or "identif" in query: # Catches 'diagnose' and 'identify'
+        if "diagnos" in query or "identif" in query:
             return f"To diagnose {disease_name}, look for the following: {disease_info['diagnosis']}"
 
-        # Default fallback answer
         return f"Here is some general information about {disease_name}: {disease_info['information']}"
 
-# Use lru_cache to ensure we only create ONE instance of the chatbot service
 @lru_cache()
 def get_bot_service():
     return LocalKnowledgeBot()

@@ -1,7 +1,3 @@
-# =============================================================================
-# FILE: app/ml/inference.py
-# VERSION: CORRECTED - Fixes the CLIP gatekeeper bug.
-# =============================================================================
 import joblib
 import numpy as np
 import cv2
@@ -19,9 +15,6 @@ import clip
 
 from ..core.config import settings
 
-# =============================================================================
-# REQUIRED DEFINITIONS FOR JOBLIB (No changes here)
-# =============================================================================
 def convert_to_pil(image: np.ndarray) -> Image.Image:
     if isinstance(image, np.ndarray):
         return Image.fromarray(image)
@@ -59,12 +52,7 @@ class PredictionPipeline:
         self.transforms = transforms
         self.idx_to_class = idx_to_class
 
-# =============================================================================
-# MODEL MANAGEMENT
-# =============================================================================
 ml_models: Dict[str, Any] = {}
-# --- [FIX #1] --- FORCE CPU USAGE FOR RELIABILITY ---
-# This avoids all potential CUDA driver issues on local machines and servers.
 device = "cpu"
 print(f"INFO:     Forcing all ML models to use device: '{device}'")
 
@@ -73,7 +61,6 @@ def load_models(model_path: Path):
     if not model_path.exists():
         raise FileNotFoundError(f"Specialist model file not found at {model_path}")
 
-    # Load specialist model (no changes needed here)
     print(f"INFO:     Loading specialist model from: {model_path}")
     sys.modules['__main__'].convert_to_pil = convert_to_pil
     sys.modules['__main__'].MobileNetV3CropModel = MobileNetV3CropModel
@@ -84,10 +71,8 @@ def load_models(model_path: Path):
     ml_models["mobilenet_pipeline"] = pipeline
     print("INFO:     Specialist model loaded successfully.")
 
-    # Load CLIP gatekeeper model
     if "gatekeeper" not in ml_models:
         print("INFO:     Loading CLIP Gatekeeper model...")
-        # The 'device' variable is now hardcoded to 'cpu'
         gatekeeper_model, gatekeeper_preprocess = clip.load("ViT-B/32", device=device)
         ml_models["gatekeeper"] = gatekeeper_model
         ml_models["gatekeeper_preprocess"] = gatekeeper_preprocess
@@ -97,9 +82,6 @@ def unload_models():
     ml_models.clear()
     print("INFO:     All models unloaded.")
 
-# =============================================================================
-# THE CORRECTED GATEKEEPER FUNCTION
-# =============================================================================
 def is_image_a_leaf_permissive(image_bytes: bytes, debug=True) -> bool:
     """
     Uses CLIP with improved prompts and strict, reliable logic to validate images.
@@ -112,7 +94,6 @@ def is_image_a_leaf_permissive(image_bytes: bytes, debug=True) -> bool:
 
     try:
         pil_image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
-        # The .to(device) call will now reliably work because device is 'cpu'
         image = preprocess(pil_image).unsqueeze(0).to(device)
 
         plant_prompts = [
@@ -147,14 +128,9 @@ def is_image_a_leaf_permissive(image_bytes: bytes, debug=True) -> bool:
         return is_acceptable
 
     except Exception as e:
-        # --- [FIX #2] --- FAIL-CLOSED MECHANISM ---
-        # If any error occurs, REJECT the image instead of allowing it through.
         print(f"ERROR: Gatekeeper check failed with an unexpected exception: {e}. REJECTING image for safety.")
         return False
 
-# =============================================================================
-# SPECIALIST MODEL PREDICTION (No changes here)
-# =============================================================================
 def run_prediction(image_bytes: bytes) -> List[Dict[str, Any]]:
     """
     Runs your specialist model to get top-5 disease predictions.

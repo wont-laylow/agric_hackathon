@@ -23,14 +23,12 @@ class PredictionResponse(BaseModel):
     filename: str
     content_type: str
     
-    #Fields for the top prediction ---
     predicted_class: str = Field(..., example="Tomato_leaf_blight")
     crop: str = Field(..., example="Tomato")
     disease: str = Field(..., example="Leaf Blight")
     confidence: float = Field(..., gt=0, le=100, example=95.43)
     is_healthy: bool
     
-    #Field for the list of top 5 predictions ---
     top_predictions: List[SinglePrediction]
     confidence_warning: Optional[str] = Field(None, example="Low Confidence (22.74%): The model is not confident...")
 

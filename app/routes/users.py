@@ -27,7 +27,6 @@ async def create_user(user: UserCreate, db: Session = Depends(get_db)):
         logger.error(f"Error in create_user: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
 @router.post("/login", response_model=UserLoginResponse)
 async def login_user(user: UserLogin, db: Session = Depends(get_db)):
     try:
