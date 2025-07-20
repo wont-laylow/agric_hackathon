@@ -10,7 +10,6 @@ class ChatResponse(BaseModel):
     reply: str
 
 class FeedbackCreate(BaseModel):
-    chat_id: int
     rating: bool
     comment: Optional[str] = None
 

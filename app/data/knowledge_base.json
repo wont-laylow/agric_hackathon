@@ -1,0 +1,186 @@
+{
+  "Cashew": [
+    {
+      "name": "Cashew_gumosis",
+      "information": "Cashew gummosis is a serious fungal disease that affects stressed cashew plants. It is considered one of the most significant diseases impacting the cashew industry, particularly in northeastern Brazil where it was first reported in the early 1990s.",
+      "causes": "The primary cause of gummosis is the fungus *Lasiodiplodia theobromae*. This fungus is often opportunistic, meaning it typically infects trees that are already stressed due to factors like water scarcity or physical injuries. The disease can also be caused by *Colletotrichum gloeosporioides*. The pathogen spreads through spores, often via rain, irrigation water, or contaminated pruning tools.",
+      "effects": "The main symptoms include cankers on the trunk and branches that ooze a characteristic gum-like resin. This leads to reduced water and nutrient transport, branch dieback, reduced photosynthesis, and can eventually kill the entire tree. Infected trees may show slow growth and yellowing branches.",
+      "diagnosis": "Diagnosis is based on the presence of cankers exuding gum on the trunk and branches. Making a cut into the bark will reveal dark brown to black discolored tissue underneath. Laboratory analysis of the affected tissue can confirm the presence of the *Lasiodiplodia theobromae* or other causal fungi.",
+      "recommended_chemical_treatment": "Fungicides such as Benomyl and Copper Oxychloride can be used to manage the disease. It is often applied as a paste or spray to the affected areas."
+    },
+    {
+      "name": "Cashew_healthy",
+      "information": "A healthy cashew tree will have vigorous growth, with lush green leaves and no signs of spots, wilting, or unusual growths. The trunk and branches will be free of cankers or gum exudation. Healthy trees produce a good yield of cashew nuts and apples.",
+      "causes": "N/A",
+      "effects": "N/A",
+      "diagnosis": "N/A",
+      "recommended_chemical_treatment": "N/A"
+    },
+    {
+      "name": "Cashew_red_rust",
+      "information": "Red rust, also known as algal leaf spot, is a disease caused by an alga, not a fungus. While it can affect cashew trees, the severity of its impact can vary.",
+      "causes": "The causal agent of red rust is the parasitic alga *Cephaleuros virescens*. The alga spreads through wind and rain splash.",
+      "effects": "The most visible symptom is the appearance of orange, rust-colored, velvety spots on the upper surface of the leaves. These spots can reduce the photosynthetic area of the leaves. In severe cases, it can lead to leaf drop and reduced plant vigor, although it's often considered a minor disease.",
+      "diagnosis": "The disease is diagnosed by the characteristic orange, powdery spots on the leaves. Microscopic examination can confirm the presence of the algal pathogen.",
+      "recommended_chemical_treatment": "Copper-based fungicides like Copper Oxychloride or Bordeaux mixture can be effective. Sulfur fungicides can also provide control."
+    },
+    {
+      "name": "Cashew_anthracnose",
+      "information": "Anthracnose is a common and serious fungal disease of cashew trees, affecting all parts of the plant, including leaves, flowers, nuts, and apples. It can cause significant yield losses, especially in wet and humid conditions.",
+      "causes": "The disease is primarily caused by the fungus *Colletotrichum gloeosporioides*. This fungus thrives in warm, humid weather and is spread by rain splash, wind, and contaminated tools.",
+      "effects": "Symptoms include dark, sunken lesions on leaves, flowers, and fruits. On leaves, small, water-soaked spots appear that enlarge and turn brown to black. Infected flowers may blight and fall off, leading to poor fruit set. On fruits, the disease causes black, sunken spots, which can lead to fruit rot and premature drop. It can significantly reduce both the quality and quantity of the harvest.",
+      "diagnosis": "The disease is identified by the characteristic dark, sunken lesions on various plant parts. The presence of pinkish spore masses in the center of the lesions under humid conditions is a key diagnostic feature. Laboratory isolation and identification of the fungus can confirm the diagnosis.",
+      "recommended_chemical_treatment": "Fungicides containing Mancozeb, Carbendazim, Copper-based compounds, Propiconazole, or Azoxystrobin are commonly used. Spraying should be done preventatively, especially during flowering and fruit development stages."
+    },
+    {
+      "name": "Cashew_leaf_miner",
+      "information": "The cashew leaf miner is an insect pest that primarily damages the young foliage of cashew trees. The damage is caused by the larvae of a moth.",
+      "causes": "The damage is caused by the larvae of the moth *Acrocercops syngramma*. The adult moth lays eggs on tender leaves, and the hatched larvae mine into the leaf tissue.",
+      "effects": "The larvae feed on the internal tissues of the leaves, creating silvery-white, blister-like patches or serpentine mines. This damage reduces the photosynthetic capacity of the leaves. In severe infestations, leaves can dry up, curl, and fall off, leading to reduced plant growth and vigor, especially in young plants.",
+      "diagnosis": "The presence of silvery, winding mines or blistered patches on the leaves is a clear sign of leaf miner infestation. The small, pale-white to reddish-brown larvae can be found inside these mines upon close inspection.",
+      "recommended_chemical_treatment": "Insecticides such as Monocrotophos, Profenofos, Chlorpyrifos, Lambda-cyhalothrin, or Acetamiprid can be effective. It is important to target the larval stage for best results."
+    }
+  ],
+  "Cassava": [
+    {
+      "name": "Cassava_green_mite",
+      "information": "The cassava green mite is a significant pest of cassava, particularly in Africa and South America. It can cause substantial yield losses, especially during the dry season.",
+      "causes": "The damage is caused by the mite *Mononychellus tanajoa*. These mites are very small and feed on the underside of young leaves. They thrive in hot, dry conditions and can be spread by wind, rain splash, and on infested planting material.",
+      "effects": "The mites suck the contents of leaf cells, causing yellow spots (chlorosis) on the leaves. Heavy infestations lead to mottled leaves, stunted growth, and leaf shedding. A characteristic symptom is the \"candle stick\" appearance of the shoot tips, where the terminal leaves die and fall off. Severe attacks can reduce tuber yield by 20-80%.",
+      "diagnosis": "The presence of tiny yellowish-green mites on the underside of young leaves is a key diagnostic feature. A hand lens is often needed to see them clearly. The characteristic yellow spotting on the leaves and the \"candle stick\" symptom are also strong indicators of an infestation.",
+      "recommended_chemical_treatment": "Chemical control is often not recommended due to resistance development. However, the acaricide Abamectin has been found to be effective. Biological control using predatory mites is the preferred method."
+    },
+    {
+      "name": "Cassava_bacterial_blight",
+      "information": "Cassava bacterial blight (CBB) is a devastating bacterial disease that affects cassava worldwide and can cause significant yield losses.",
+      "causes": "The disease is caused by the bacterium *Xanthomonas axonopodis pv. manihotis*. It spreads through infected planting material, contaminated tools, and rain splash. The bacteria enter the plant through natural openings or wounds.",
+      "effects": "Symptoms include angular, water-soaked spots on leaves that enlarge and turn brown, often with a yellow halo. The disease can cause wilting, dieback of stems, and vascular necrosis. A sticky, yellowish gum may ooze from cracks in the stems and leaf stalks.",
+      "diagnosis": "The presence of angular leaf spots, wilting, and stem exudates are key diagnostic symptoms. Cutting into an infected stem may reveal brown streaks in the vascular tissue. Laboratory tests can confirm the presence of the bacterium.",
+      "recommended_chemical_treatment": "There is no effective chemical treatment for controlling the disease once it has established. Management focuses on prevention through the use of clean, disease-free planting material and good sanitation practices."
+    },
+    {
+      "name": "Cassava_mosaic",
+      "information": "Cassava mosaic disease (CMD) is one of the most damaging viral diseases of cassava, particularly in Africa and Asia. It can lead to severe crop losses.",
+      "causes": "CMD is caused by a group of viruses called cassava mosaic geminiviruses (CMGs). These viruses are transmitted by the whitefly *Bemisia tabaci* and through the use of infected stem cuttings for planting.",
+      "effects": "The most common symptom is a mosaic pattern on the leaves, with patches of yellow or light green mixed with the normal green color. Leaves can also be distorted, twisted, and stunted. Severely infected plants are stunted, produce fewer and smaller tubers, and may even be killed.",
+      "diagnosis": "The characteristic mosaic and mottling of the leaves are the primary diagnostic features. Leaf distortion and stunting of the plant are also common. Viral indexing and molecular tests can be used for a definitive diagnosis.",
+      "recommended_chemical_treatment": "There is no direct chemical treatment for the virus. Control efforts focus on managing the whitefly vector using insecticides containing Cypermethrin, Deltamethrin, or Flupyradifurone. Using virus-free planting material is crucial."
+    },
+    {
+      "name": "Cassava_healthy",
+      "information": "A healthy cassava plant has dark green leaves with no signs of mosaic, spots, or blight. The stems are strong and the plant exhibits vigorous growth. Healthy plants produce a good yield of large tubers.",
+      "causes": "N/A",
+      "effects": "N/A",
+      "diagnosis": "N/A",
+      "recommended_chemical_treatment": "N/A"
+    },
+    {
+      "name": "Cassava_brown_spot",
+      "information": "Cassava brown leaf spot is a common fungal disease of cassava that is found worldwide. It primarily affects older, lower leaves and is more prevalent in warm, humid conditions.",
+      "causes": "The disease is caused by the fungus *Cercosporidium henningsii* (also known as *Mycosphaerella henningsii*). The fungus survives on infected plant debris in the soil and is spread by wind and rain splash.",
+      "effects": "The main symptom is the appearance of brown, circular to angular spots with a dark border on the leaves. The center of the spots may turn gray and fall out, creating a 'shot-hole' effect. In severe cases, the disease can cause premature defoliation, which can reduce tuber yield by up to 30%.",
+      "diagnosis": "The disease is diagnosed by the presence of the characteristic brown, angular spots on the lower leaves of the plant. The spots may have a yellow halo. Laboratory analysis can confirm the presence of the fungus.",
+      "recommended_chemical_treatment": "Fungicides containing Thiophanate, Chlorthalonil, Copper-based compounds, Mancozeb, or Carbendazim can be effective. Dipping planting material in a fungicide solution can also help."
+    }
+  ],
+  "Maize": [
+    {
+      "name": "Maize_leaf_beetle",
+      "information": "Maize leaf beetles are occasional pests that can cause damage to maize crops, particularly when they appear in large numbers.",
+      "causes": "Damage is caused by several species of leaf beetles, including the corn flea beetle (*Chaetocnema pulicaria*) and the redshouldered leaf beetle (*Monolepta australis*). The adult beetles feed on the leaves, while the larvae of some species feed on the roots.",
+      "effects": "Adult feeding on leaves causes skeletonization, where the leaf tissue is removed, leaving the veins intact. This can result in a 'frosted' or 'scorched' appearance. High populations can cause significant defoliation and may also transmit bacterial diseases like Stewart's wilt. Larval root feeding can stunt plant growth.",
+      "diagnosis": "The presence of adult beetles on the plants and the characteristic skeletonized leaves are key diagnostic features. The specific beetle species can be identified based on its appearance.",
+      "recommended_chemical_treatment": "Seed treatments with Imidacloprid can protect seedlings. For foliar applications, insecticides like Gamma-cyhalothrin, Lambda-cyhalothrin, Malathion, and Carbaryl are effective."
+    },
+    {
+      "name": "Maize_healthy",
+      "information": "A healthy maize plant stands tall with vibrant green leaves. The leaves are broad and show no signs of spotting, streaking, or insect damage. The cobs are well-formed and full of kernels.",
+      "causes": "N/A",
+      "effects": "N/A",
+      "diagnosis": "N/A",
+      "recommended_chemical_treatment": "N/A"
+    },
+    {
+      "name": "Maize_leaf_blight",
+      "information": "Maize leaf blight is a common fungal disease that affects maize worldwide. There are several different types of leaf blight, including Northern Corn Leaf Blight and Southern Corn Leaf Blight.",
+      "causes": "Northern Corn Leaf Blight is caused by the fungus *Exserohilum turcicum* (*Setosphaeria turcica*), while Southern Corn Leaf Blight is caused by *Cochliobolus heterostrophus*. These fungi survive on infected crop residue and are spread by wind and rain. Warm, humid weather favors disease development.",
+      "effects": "Symptoms of Northern Corn Leaf Blight are long, elliptical, grayish-green or tan lesions on the leaves. Southern Corn Leaf Blight produces smaller, parallel-sided lesions. Severe infections can lead to significant loss of leaf area, which reduces photosynthesis and results in lower grain yield.",
+      "diagnosis": "The disease is diagnosed by the characteristic lesions on the leaves. The size, shape, and color of the lesions can help differentiate between the different types of leaf blight.",
+      "recommended_chemical_treatment": "Foliar fungicides are effective. Recommended active ingredients include Mancozeb, Propiconazole, Azoxystrobin, Difenoconazole, Pyraclostrobin, and Chlorothalonil."
+    },
+    {
+      "name": "Maize_grasshoper",
+      "information": "Grasshoppers are common insect pests of maize and can cause significant damage, especially during outbreaks, which are often associated with dry weather.",
+      "causes": "Damage is caused by several species of grasshoppers that feed on maize plants. They are more likely to move into maize fields from surrounding grassy areas, especially when their natural food sources dry up.",
+      "effects": "Grasshoppers chew on the leaves, creating ragged holes and sometimes consuming the entire leaf except for the midrib. They can also feed on the silks, which interferes with pollination and grain development. In severe infestations, they can cause complete defoliation.",
+      "diagnosis": "The presence of grasshoppers on the plants and the characteristic chewing damage to the leaves and silks are the main diagnostic signs.",
+      "recommended_chemical_treatment": "Insecticides such as Carbaryl, Malathion, Bifenthrin, Permethrin, Cyfluthrin, and Lambda-cyhalothrin can be used. Treating field borders may be sufficient to control migrating populations."
+    },
+    {
+      "name": "Maize_fall_armyworm",
+      "information": "The fall armyworm (*Spodoptera frugiperda*) is a highly destructive insect pest of maize and other crops. It can cause significant yield losses if not controlled.",
+      "causes": "The damage is caused by the larval stage (caterpillar) of the fall armyworm moth. The moths lay eggs on the leaves, and the hatched larvae feed on the plant.",
+      "effects": "Young larvae feed on the leaves, creating 'windowpane' damage. As they grow, they move into the whorl and cause ragged holes in the leaves. They can also feed on the tassel and bore into the ears, damaging the kernels. Severe infestations can lead to significant defoliation and yield loss.",
+      "diagnosis": "The presence of the characteristic larvae, which have a distinctive inverted 'Y' shape on their head, is a key diagnostic feature. The 'windowpane' and ragged hole damage to the leaves are also strong indicators.",
+      "recommended_chemical_treatment": "Seed treatments with insecticides like Chlorantraniliprole or Cyantraniliprole can provide early protection. Foliar sprays with active ingredients such as Emamectin Benzoate, Lufenuron, or Chlorantraniliprole + Lambda-cyhalothrin are effective against larvae."
+    },
+    {
+      "name": "Maize_streak_virus",
+      "information": "Maize streak virus (MSV) is a viral disease that is a major constraint to maize production in sub-Saharan Africa. It can cause severe yield losses, particularly if plants are infected at an early stage.",
+      "causes": "The disease is caused by the Maize streak virus, a geminivirus. It is transmitted by several species of leafhopper insects, most notably *Cicadulina mbila*. The virus is not seed-borne.",
+      "effects": "The main symptom is the appearance of narrow, broken, white or yellow stripes (streaks) along the veins of the leaves. The streaks are initially small and circular but elongate and can cover the entire leaf. Infected plants are often stunted, and in severe cases, they may not produce any cobs.",
+      "diagnosis": "The characteristic white or yellow streaks on the leaves are the primary diagnostic symptom. The pattern of streaking can vary depending on the maize variety and the strain of the virus.",
+      "recommended_chemical_treatment": "There is no chemical treatment for the virus itself. Control focuses on the leafhopper vector. Seed treatments with neonicotinoids like Imidacloprid are effective. Foliar sprays with insecticides such as Dimethoate or Carbofuran can also be used to control the leafhopper population."
+    },
+    {
+      "name": "Maize_leaf_spot",
+      "information": "Maize leaf spot is a general term for a variety of fungal diseases that cause spots on maize leaves. Gray leaf spot is one of the most significant yield-limiting leaf spot diseases of maize.",
+      "causes": "Gray leaf spot is caused by the fungus *Cercospora zeae-maydis*. Other fungi, such as *Bipolaris maydis*, can also cause leaf spots. These fungi typically survive on crop residue and are spread by wind and rain. Warm, humid conditions favor their development.",
+      "effects": "Gray leaf spot symptoms start as small, tan spots with a yellow halo that elongate into rectangular, grayish-brown lesions. The lesions run parallel to the leaf veins. Severe infections can lead to premature death of leaves, reducing photosynthesis and grain yield.",
+      "diagnosis": "The disease is diagnosed by the characteristic rectangular lesions on the leaves. The color and shape of the spots can help distinguish between different leaf spot diseases.",
+      "recommended_chemical_treatment": "Foliar fungicides are effective for management. Active ingredients include Pyraclostrobin, Azoxystrobin, Propiconazole, Prothioconazole, and Trifloxystrobin. Rotating fungicides with different modes of action is recommended."
+    }
+  ],
+  "Tomato": [
+    {
+      "name": "Tomato_verticulium_wilt",
+      "information": "Verticillium wilt is a soil-borne fungal disease that affects a wide range of plants, including tomatoes. It can cause significant yield losses by blocking the plant's water-conducting tissues.",
+      "causes": "The disease is caused by the fungi *Verticillium dahliae* and *Verticillium albo-atrum*. These fungi can survive in the soil for many years. They enter the plant through the roots and spread upwards through the vascular system.",
+      "effects": "Early symptoms include yellowing and wilting of the lower leaves, often on one side of the plant or leaf. A characteristic V-shaped lesion often forms on the leaf margin. The plant may wilt during the day and recover at night. As the disease progresses, the wilting becomes permanent, and the plant may be stunted and produce little fruit.",
+      "diagnosis": "The V-shaped lesions on the leaves are a distinctive symptom. Cutting open the lower stem will reveal a light brown discoloration of the vascular tissue, which is a key diagnostic feature.",
+      "recommended_chemical_treatment": "There are no highly effective chemical fungicides to cure infected plants. Soil fumigation before planting can reduce the fungal population in the soil, but this is often expensive and has environmental impacts. Using resistant varieties is the most effective control method."
+    },
+    {
+      "name": "Tomato_septoria_leaf_spot",
+      "information": "Septoria leaf spot is a common and destructive fungal disease of tomato foliage, especially in areas with wet, humid weather.",
+      "causes": "The disease is caused by the fungus *Septoria lycopersici*. The fungus overwinters on infected tomato debris and weeds in the nightshade family. It is spread by rain splash, overhead irrigation, and on contaminated tools and hands.",
+      "effects": "Symptoms begin as small, water-soaked spots on the lower leaves. These spots enlarge and develop dark brown margins with tan or gray centers. Tiny black specks (pycnidia) can often be seen in the center of the spots. Heavily infected leaves turn yellow, wither, and fall off, which can lead to sunscald on the fruit.",
+      "diagnosis": "The disease is identified by the numerous small, circular spots with dark borders and tan centers on the leaves. The presence of black pycnidia in the center of the spots is a key diagnostic feature.",
+      "recommended_chemical_treatment": "Fungicides containing Chlorothalonil, Mancozeb, Maneb, or copper-based compounds (Copper Hydroxide, Copper Sulfate) are effective. Regular applications at 7-10 day intervals are needed to protect new growth."
+    },
+    {
+      "name": "Tomato_healthy",
+      "information": "A healthy tomato plant has sturdy stems and vibrant green leaves. The plant produces an abundance of flowers and sets fruit well. The fruits are well-formed and ripen evenly.",
+      "causes": "N/A",
+      "effects": "N/A",
+      "diagnosis": "N/A",
+      "recommended_chemical_treatment": "N/A"
+    },
+    {
+      "name": "Tomato_leaf_blight",
+      "information": "Tomato blight is a general term for several fungal diseases that affect tomatoes, with early blight and late blight being the most common. These diseases can cause significant damage to leaves, stems, and fruit.",
+      "causes": "Early blight is caused by the fungus *Alternaria solani*, while late blight is caused by the water mold *Phytophthora infestans*. Both pathogens are spread by wind and rain and thrive in humid conditions. Early blight often survives in the soil on plant debris, while late blight requires living tissue to survive.",
+      "effects": "Early blight causes dark, concentric rings on the leaves, similar to a target. Late blight causes large, irregularly shaped, water-soaked lesions on leaves and fruit. Both diseases can cause defoliation, which can lead to sunscald on the fruit and reduced yields. Late blight can be particularly destructive, capable of destroying an entire crop in a short time.",
+      "diagnosis": "The diseases are diagnosed based on the appearance of the lesions. Early blight is characterized by its 'target-like' spots. Late blight is identified by the large, water-soaked lesions and the presence of a white, fuzzy mold on the underside of the leaves in humid conditions.",
+      "recommended_chemical_treatment": "For Early Blight, use fungicides with Chlorothalonil or Mancozeb. For Late Blight, effective fungicides contain Chlorothalonil, Mancozeb, Mandipropamid, or Copper-based compounds. Protective sprays should be applied, especially when weather conditions are favorable for the diseases."
+    },
+    {
+      "name": "Tomato_leaf_curl",
+      "information": "Tomato leaf curl is a common symptom that can be caused by a variety of factors, including environmental stress, viral infections, and pests.",
+      "causes": "Environmental factors such as high heat, drought, and excessive moisture can cause leaves to roll or curl. Viral causes include Tomato yellow leaf curl virus and Tomato mosaic virus, which are often transmitted by insects like whiteflies. Pests such as aphids and broad mites can also cause leaf curling.",
+      "effects": "The leaves of the plant may curl upwards or downwards. Depending on the cause, the plant's growth may be stunted, and fruit production can be reduced. In the case of viral infections, the leaves may also show yellowing or mosaic patterns.",
+      "diagnosis": "Diagnosing the cause of leaf curl requires careful observation. If the curling is due to environmental stress, the plant may otherwise appear healthy. If a virus is the cause, other symptoms like stunting and yellowing will likely be present. Check for the presence of insects on the undersides of the leaves to rule out pests as the cause.",
+      "recommended_chemical_treatment": "If caused by a virus, there is no direct chemical treatment. The focus is on controlling the whitefly vector with insecticides like Imidacloprid, Abamectin, Pyriproxyfen, or Diafenthiuron. If caused by pests like aphids or mites, appropriate insecticides or miticides should be used."
+    }
+  ]
+}

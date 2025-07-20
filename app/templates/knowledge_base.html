@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+    <!-- The title will now be dynamic -->
+    <title>{{ info.name.replace('_', ' ') if info else 'Knowledge Base' }}</title>
+    <style>
+        .container { max-width: 900px; }
+        .kb-card { background-color: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .kb-header h1 {
+            color: #1a237e; /* Dark blue */
+            border-bottom: 2px solid #e8eaf6;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 2.2em;
+        }
+        .kb-header .crop-badge {
+            display: inline-block;
+            background-color: #e8f5e9; /* Light green */
+            color: #2e7d32; /* Dark green */
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .kb-section { margin-bottom: 2rem; }
+        .kb-section h3 { 
+            color: #3f51b5; /* Indigo */
+            margin-bottom: 0.75rem; 
+            font-size: 1.4em;
+            border-left: 4px solid #c5cae9;
+            padding-left: 10px;
+        }
+        .kb-section p { 
+            color: #444; 
+            line-height: 1.7; 
+            padding-left: 14px; /* Align with heading */
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            text-decoration: none;
+            background-color: #5c6bc0;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .back-link:hover { background-color: #3f51b5; }
+        .error-card { text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main>
+            {% if info %}
+            <div class="card kb-card">
+                <div class="kb-header">
+                    <!-- Format the disease name for display -->
+                    <h1>{{ info.name.split('_', 1)[1].replace('_', ' ') | title }}</h1>
+                    <span class="crop-badge">{{ info.crop }}</span>
+                </div>
+
+                <div class="kb-section">
+                    <h3>Information</h3>
+                    <p>{{ info.information }}</p>
+                </div>
+
+                <div class="kb-section">
+                    <h3>Causes</h3>
+                    <p>{{ info.causes }}</p>
+                </div>
+
+                <div class="kb-section">
+                    <h3>Effects & Symptoms</h3>
+                    <p>{{ info.effects }}</p>
+                </div>
+
+                <div class="kb-section">
+                    <h3>Diagnosis</h3>
+                    <p>{{ info.diagnosis }}</p>
+                </div>
+                
+                <div class="kb-section">
+                    <h3>Recommended Chemical Treatment</h3>
+                    <p>{{ info.recommended_chemical_treatment }}</p>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if error %}
+            <div class="card error-card">
+                <h2>Information Not Found</h2>
+                <p>{{ error }}</p>
+            </div>
+            {% endif %}
+            
+            <a href="/" class="back-link">← Back to Predictor</a>
+        </main>
+        <footer>
+            <p>Powered by FastAPI & PyTorch</p>
+        </footer>
+    </div>
+</body>
+</html>

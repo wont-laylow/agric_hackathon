@@ -7,8 +7,9 @@ from app.models.db import get_db
 from sqlalchemy.orm import Session
 from fastapi import Depends
 from utils.logger import logger
-from app.models.models import ChatHistory, Feedback
+from app.models.model import ChatHistory, Feedback, User
 from datetime import datetime
+from app.utils import get_current_user
 
 router = APIRouter(prefix="/api/v1/chat", tags=["Chat"])
 
@@ -37,11 +38,18 @@ async def chat(request: ChatRequest, db: Session = Depends(get_db)):
 @router.post("/feedback", response_model=FeedbackResponse)
 async def submit_feedback(feedback: FeedbackCreate, db: Session = Depends(get_db)):
     try:
+        chat_entry = db.query(ChatHistory).filter(ChatHistory.id == feedback.chat_id).first()
+        if not chat_entry:
+            raise HTTPException(status_code=404, detail="Chat not found")
+        
+        # if chat_entry.user_id != current_user.id:
+        #     raise HTTPException(status_code=403, detail="Unauthorized to submit feedback for this chat")
+        
         new_feedback = Feedback(
-            chat_id=feedback.chat_id,
             rating=feedback.rating,
             comment=feedback.comment
         )
+
         db.add(new_feedback)
         db.commit()
         db.refresh(new_feedback)
