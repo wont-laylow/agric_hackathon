@@ -1,5 +1,12 @@
 # Crop Disease Analyzer - AI-Powered Agricultural Assistant
 
+## 🚀 Quickstart
+
+Clone the repository and start the application with Uvicorn:
+https://github.com/wont-laylow/agric_hackathon.git
+
+run it using the command uvicorn app.main:app --reload and then access you local host http://127.0.0.1:8000 to view the app.
+
 ## 🌱 Overview
 
 The Crop Disease Analyzer is a comprehensive AI-powered system designed to help farmers identify and manage crop diseases through image analysis and intelligent chatbot assistance. Built with FastAPI, PyTorch, and advanced machine learning techniques, this system provides real-time disease detection and expert agricultural advice.
