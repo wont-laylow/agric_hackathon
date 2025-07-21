@@ -9,7 +9,7 @@ run it using the command uvicorn app.main:app --reload and then access your loca
 
 ## 🌱 Overview
 
-The Crop Disease Analyzer is a comprehensive AI-powered system designed to help farmers identify and manage crop diseases through image analysis and intelligent chatbot assistance. Built with FastAPI, PyTorch, and advanced machine learning techniques, this system provides real-time disease detection and expert agricultural advice.
+This is a comprehensive AI-powered system designed to help farmers identify and manage crop diseases through image analysis and intelligent chatbot assistance. Built with FastAPI, PyTorch, and advanced machine learning techniques, this system provides real-time disease detection and expert agricultural advice.
 
 ## 🎯 Key Features
 
