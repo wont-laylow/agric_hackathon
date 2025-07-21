@@ -1,4 +1,4 @@
-# Crop Disease Analyzer - AI-Powered Agricultural Assistant
+# TOUT
 
 ## 🚀 Quickstart
 
