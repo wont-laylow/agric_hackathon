@@ -5,7 +5,7 @@
 Clone the repository and start the application with Uvicorn:
 https://github.com/wont-laylow/agric_hackathon.git
 
-run it using the command uvicorn app.main:app --reload and then access you local host http://127.0.0.1:8000 to view the app.
+run it using the command uvicorn app.main:app --reload and then access your local host http://127.0.0.1:8000 to view the app.
 
 ## 🌱 Overview
 
